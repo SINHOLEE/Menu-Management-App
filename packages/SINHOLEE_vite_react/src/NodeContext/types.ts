@@ -4,6 +4,12 @@ export type GlobalUniqueNode = {
   type: string;
 };
 
+export interface ClientMenuItem {
+  id: string;
+  title: string;
+  isSoldOut: boolean;
+}
+
 export interface MenuItem extends GlobalUniqueNode {
   type: '@menuItem';
   title: string;

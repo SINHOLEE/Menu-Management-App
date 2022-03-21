@@ -3,6 +3,7 @@ import { GLOBAL_UNIQUE_TYPE } from '../NodeContext/constants';
 import { Header } from './components/Header';
 import { useSearchParams } from 'react-router-dom';
 import MenusContainer from './components/menus/MenusContainer';
+import { LAYOUT } from '../css-constant';
 
 const MenuPage = () => {
   const [searchParams] = useSearchParams();
@@ -11,7 +12,9 @@ const MenuPage = () => {
   return (
     <>
       <Header />
-      <MenusContainer categoryId={categoryId} />
+      <main className={LAYOUT.container}>
+        <MenusContainer categoryId={categoryId} />
+      </main>
     </>
   );
 };
